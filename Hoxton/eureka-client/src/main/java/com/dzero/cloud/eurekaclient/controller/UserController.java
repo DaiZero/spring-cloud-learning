@@ -14,9 +14,9 @@ public class UserController {
     @Value("${server.port}")
     private int port;
 
-    @GetMapping("/list")
-    public Map<String, Object> getUserList() {
-        System.out.println("/api/user/list 接口被调用，服务端口号：" + port);
+    @GetMapping("/admin")
+    public Map<String, Object> getAdmin() {
+        System.out.println("/api/user/admin 接口被调用，服务端口号：" + port);
         Person person = new Person();
         person.setUserId(0);
         person.setUserName("dzero");
