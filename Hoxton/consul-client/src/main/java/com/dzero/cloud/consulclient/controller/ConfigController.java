@@ -1,4 +1,4 @@
-package com.dzero.cloud.nacosclient.controller;
+package com.dzero.cloud.consulclient.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -16,6 +16,6 @@ public class ConfigController {
 
     @GetMapping("/info")
     public Object getInfo() {
-        return "nacosClient-获取的配置信息为：" + info;
+        return "consulClient-获取的配置信息为：" + info;
     }
 }
