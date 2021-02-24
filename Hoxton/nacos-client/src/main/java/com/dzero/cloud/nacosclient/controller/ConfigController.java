@@ -11,11 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/config")
 public class ConfigController {
 
+    @Value("${server.port}")
+    private String port;
+
     @Value("${config.info}")
     private String info;
 
     @GetMapping("/info")
-    public Object getInfo() {
-        return "nacosClient-获取的配置信息为：" + info;
+    public String getInfo() {
+        return "nacosClient 端口号："+port+"，配置信息：" + info;
     }
 }
